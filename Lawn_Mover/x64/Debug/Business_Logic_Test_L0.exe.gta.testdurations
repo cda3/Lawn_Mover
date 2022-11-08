@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>C:\Lawn_Mover\Lawn_Mover\x64\Debug\Business_Logic_Test_L0.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="DisposeOldResources.TwoResourcesFound_TwoResourcesOld_BothDeleted" Duration="1" />
+    <TestDuration Test="DisposeOldResources.TwoResourcesFound_OneResourceOld_OneResourceDeleted" Duration="1" />
+    <TestDuration Test="TestCaseName.TestName" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
