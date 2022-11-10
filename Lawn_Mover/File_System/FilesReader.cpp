@@ -1,38 +1,40 @@
 #include "pch.h"
 #include "FilesReader.h"
-#include "./Resource_File.h"
+#include "Resource_File.h"
 #include <filesystem>
 #include <sys/stat.h>
+
 
 FilesReader::FilesReader(std::string folderPath)
 {
 	_folderPath = folderPath;
 }
 
-std::vector<IResource*> FilesReader::read()
+std::vector<std::shared_ptr<IResource>> FilesReader::read()
 {
-	auto result = std::vector<IResource*>();
-
+	std::vector<std::shared_ptr<IResource>> result;
 	for (auto& file : std::filesystem::directory_iterator(_folderPath)) {
-	//for (auto& file : std::filesystem::directory_iterator{_folderPath}) {
-		
-		//to extract
-		struct stat fileInfo;
-		auto o = (file.path()).string();
-		const char * o2 = o.c_str();
-		stat(o2, &fileInfo);//read the file
-		
-		//to extract
-		struct tm newtime;
-		localtime_s(&newtime, &fileInfo.st_ctime);
-		
-		auto year = newtime.tm_year + 1900;
-		auto month = newtime.tm_mon + 1;
-		auto day = newtime.tm_mday;
-		Resource_File resource(year, month, day, o);
-		result.push_back(&resource);
+		auto filePath = (file.path()).string();
+		struct stat fileInfo = readFileInfo(filePath);
+		auto fileCreationDate = creationDate(fileInfo);
+		std::shared_ptr<Resource_File> resource(new Resource_File(fileCreationDate.Year, fileCreationDate.Month, fileCreationDate.Day, filePath));
+		//Resource_File resource(fileCreationDate.Year, fileCreationDate.Month, fileCreationDate.Day, filePath);
+		result.push_back(std::move(resource));
 	}
-
-
 	return result;
+}
+
+struct stat FilesReader::readFileInfo(std::string filePath){
+	struct stat fileInfo;
+	stat(filePath.c_str(), &fileInfo);
+	return fileInfo;
+}
+
+Date FilesReader::creationDate(struct stat fileInfo) {
+	struct tm newtime;
+	localtime_s(&newtime, &fileInfo.st_ctime);
+	auto year = newtime.tm_year + 1900;
+	auto month = newtime.tm_mon + 1;
+	auto day = newtime.tm_mday;
+	return Date(year, month, day);
 }

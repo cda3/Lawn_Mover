@@ -12,7 +12,7 @@ void DisposeOldResources::execute()
 {
 	auto resources = _reader->read();
 	for (auto it = resources.begin(); it != resources.end(); ++it)
-		checkSingleResource(*it);
+		checkSingleResource(it->get());
 }
 
 void DisposeOldResources::checkSingleResource(IResource* resource)

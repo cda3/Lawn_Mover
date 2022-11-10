@@ -6,6 +6,10 @@ int main()
 {
 	FilesReader reader("C://Test//");
 	auto x = reader.read();
+	for (auto it = std::begin(x); it != std::end(x); ++it) {
+		if ((*it)->isOld(-1))
+			(*it)->dispose();
+	}
 
 
 

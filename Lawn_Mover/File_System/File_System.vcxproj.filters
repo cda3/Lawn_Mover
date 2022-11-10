@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="DTO">
+      <UniqueIdentifier>{4be16015-9743-4360-963e-2474c1eea10d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DTO">
+      <UniqueIdentifier>{cebd570f-1dbc-4926-9c93-908f412ae9a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -27,6 +33,9 @@
     <ClInclude Include="FilesReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>DTO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -40,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="FilesReader.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files\DTO</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
