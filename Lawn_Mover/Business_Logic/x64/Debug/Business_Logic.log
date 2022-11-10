@@ -1,10 +1,4 @@
-﻿  pch.cpp
-  Business_Logic.cpp
-  DisposeOldResources.cpp
-  IResourcesReader.cpp
-  provaCandida.cpp
-  IResource.cpp
-  Generating Code...
+﻿  DisposeOldResources.cpp
 IResource.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 provaCandida.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
   Business_Logic.vcxproj -> C:\Lawn_Mover\Lawn_Mover\x64\Debug\Business_Logic.lib

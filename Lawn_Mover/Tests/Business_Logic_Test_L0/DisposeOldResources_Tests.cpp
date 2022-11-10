@@ -12,13 +12,13 @@ TEST(DisposeOldResources, TwoResourcesFound_TwoResourcesOld_BothDeleted) {
 	resources.push_back(firstResource);
 	std::shared_ptr<MockResource> secondResource(new MockResource(true));
 	resources.push_back(secondResource);
-
-	auto reader = MockIResourcesReader(resources);
-	auto deleter = DisposeOldResources(200, &reader);
+	std::shared_ptr<MockIResourcesReader>  reader(new MockIResourcesReader(resources));
+	//auto reader = MockIResourcesReader(resources);
+	auto deleter = DisposeOldResources(200, reader);
 
 	deleter.execute();
 
-	EXPECT_TRUE(reader.isReadCalled);
+	EXPECT_TRUE(reader->isReadCalled);
 	EXPECT_TRUE(firstResource->OldCalled);
 	EXPECT_TRUE(firstResource->DisposedCalled);
 	EXPECT_TRUE(secondResource->OldCalled);
@@ -33,12 +33,12 @@ TEST(DisposeOldResources, TwoResourcesFound_OneResourceOld_OneResourceDeleted) {
 	std::shared_ptr<MockResource> oldResource(new MockResource(true));
 	resources.push_back(oldResource);
 
-	auto reader = MockIResourcesReader(resources);
-	auto deleter = DisposeOldResources(200, &reader);
+	std::shared_ptr<MockIResourcesReader>  reader(new MockIResourcesReader(resources));
+	auto deleter = DisposeOldResources(200, reader);
 
 	deleter.execute();
 
-	EXPECT_TRUE(reader.isReadCalled);
+	EXPECT_TRUE(reader->isReadCalled);
 	EXPECT_TRUE(resource->OldCalled);
 	EXPECT_FALSE(resource->DisposedCalled);
 	EXPECT_TRUE(oldResource->OldCalled);

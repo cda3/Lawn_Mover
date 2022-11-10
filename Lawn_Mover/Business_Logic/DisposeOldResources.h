@@ -1,15 +1,18 @@
 #pragma once
 #include<string>
+#include<memory>
 #include"IResourcesReader.h"
 
 class DisposeOldResources {
 public:
-	DisposeOldResources(int daysForOldResources, IResourcesReader* reader);
+	//auto resources = std::vector<std::shared_ptr<IResource>>();
+
+	DisposeOldResources(int daysForOldResources, std::shared_ptr<IResourcesReader> reader);
 	void execute();
 
 private:
 	int _daysForOldResources;
-	IResourcesReader *_reader;
+	std::shared_ptr<IResourcesReader> _reader;
 	void checkSingleResource(IResource* resource);
 	bool isResourceTooOld(IResource* resource);
 

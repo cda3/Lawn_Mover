@@ -2,7 +2,7 @@
 #include "DisposeOldResources.h"
 
 
-DisposeOldResources::DisposeOldResources(int daysForOldResources, IResourcesReader* reader)
+DisposeOldResources::DisposeOldResources(int daysForOldResources, std::shared_ptr<IResourcesReader> reader)
 {
 	_daysForOldResources = daysForOldResources;
 	_reader = reader;

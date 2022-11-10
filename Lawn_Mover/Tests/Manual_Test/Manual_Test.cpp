@@ -6,8 +6,10 @@
 
 int main()
 {
-	FilesReader reader("C://Test//");
-	DisposeOldResources  disposer(-1, &reader);
+	//FilesReader reader("C://Test//");
+	std::shared_ptr<FilesReader>  reader(new FilesReader("C://Test//"));
+
+	DisposeOldResources  disposer(-1, reader);
 	disposer.execute();
 
 

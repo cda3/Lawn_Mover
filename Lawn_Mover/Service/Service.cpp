@@ -6,13 +6,11 @@
 
 int main()
 {
-	/*auto resources = std::vector<IResource>();
-
-	provaCandida test = provaCandida();*/
-
 	auto reader = ConfigurationReader();
-	auto conf = reader.loadConfiguration("C://Lawn_Mover//Lawn_Mover//Tests//Manual_Test//Configuration_examples//Configuration.json");
-
+	auto conf = reader.prepareConfiguration("C://Lawn_Mover//Lawn_Mover//Tests//Manual_Test//Configuration_examples//Configuration.json");
+	for (int i = 0; i < conf.disposers.size(); ++i) {
+		conf.disposers[i].execute();
+	}
 
     std::cout << "Hello World!\n";
 }
