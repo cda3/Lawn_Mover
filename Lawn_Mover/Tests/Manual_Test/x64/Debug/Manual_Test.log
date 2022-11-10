@@ -4,4 +4,5 @@ c:\lawn_mover\lawn_mover\file_system\resource_file.h(20): warning C4251: 'Resour
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 c:\lawn_mover\lawn_mover\file_system\filesreader.h(12): warning C4251: 'FilesReader::_folderPath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     Creating library C:\Lawn_Mover\Lawn_Mover\x64\Debug\Manual_Test.lib and object C:\Lawn_Mover\Lawn_Mover\x64\Debug\Manual_Test.exp
   Manual_Test.vcxproj -> C:\Lawn_Mover\Lawn_Mover\x64\Debug\Manual_Test.exe

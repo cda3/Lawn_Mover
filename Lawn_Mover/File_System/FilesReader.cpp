@@ -18,7 +18,6 @@ std::vector<std::shared_ptr<IResource>> FilesReader::read()
 		struct stat fileInfo = readFileInfo(filePath);
 		auto fileCreationDate = creationDate(fileInfo);
 		std::shared_ptr<Resource_File> resource(new Resource_File(fileCreationDate.Year, fileCreationDate.Month, fileCreationDate.Day, filePath));
-		//Resource_File resource(fileCreationDate.Year, fileCreationDate.Month, fileCreationDate.Day, filePath);
 		result.push_back(std::move(resource));
 	}
 	return result;

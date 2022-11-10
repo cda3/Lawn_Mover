@@ -34,9 +34,11 @@ TEST(Resource_File, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
 	EXPECT_TRUE(file.isDisposeCalled);
 }
 
-TEST(Resource_File, dispose_ErrorDuringDisposing_ThrowException) {
+TEST(Resource_File, dispose_ErrorDuringDisposing_NoExceptionThrownBecauseDeletionIsIdempotent) {
 	int deleteUnsuccessfull = 1;
 	MockResourceFile file(2022, 11, 4, "", deleteUnsuccessfull);
 
-	ASSERT_THROW(file.dispose(), std::exception);
+	file.dispose();
+	
+	EXPECT_TRUE(file.isDisposeCalled);
 }

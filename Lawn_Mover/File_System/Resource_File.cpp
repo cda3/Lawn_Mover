@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Resource_File.h"
 #include <stdio.h>
+#include <iostream>
 
 
 Resource_File::Resource_File(int year, int month, int day, std::string filePath)
@@ -23,10 +24,7 @@ void Resource_File::dispose()
 {
 	auto result = removeFile();
 	if (result != 0) {
-		char res[500];
-		strcpy_s(res, "Error deleting file ");
-		strcat_s(res, _filePath.c_str());
-		throw std::exception(res);
+		std::cout << "File " << _filePath.c_str() << " already removed from another Lawn Mover instance" << std::endl;
 	}
 }
 

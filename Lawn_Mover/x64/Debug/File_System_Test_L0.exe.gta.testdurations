@@ -10,5 +10,6 @@
     <TestDuration Test="Resource_File.dispose_NoErrorInDisposing_NoExceptionThrown" Duration="1" />
     <TestDuration Test="Resource_File.dispose_NoErrorDuringDisposing_NoExceptionThrown" Duration="1" />
     <TestDuration Test="Resource_File.dispose_ErrorDuringDisposing_ThrowException" Duration="1" />
+    <TestDuration Test="Resource_File.dispose_ErrorDuringDisposing_NoExceptionThrown" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

@@ -1,15 +1,17 @@
 #include <iostream>
 #include  "../../File_System/Resource_File.h"
 #include "../../File_System/FilesReader.h"
+#include "Manual_Test.h"
+#include "../../Business_Logic/DisposeOldResources.h"
 
 int main()
 {
 	FilesReader reader("C://Test//");
-	auto x = reader.read();
-	for (auto it = std::begin(x); it != std::end(x); ++it) {
-		if ((*it)->isOld(-1))
-			(*it)->dispose();
-	}
+	DisposeOldResources  disposer(-1, &reader);
+	disposer.execute();
+
+
+	//fileReaderTest();
 
 
 
@@ -20,5 +22,15 @@ int main()
 
 
     std::cout << "Hello World!\n";
+}
+
+void fileReaderTest()
+{
+	FilesReader reader("C://Test//");
+	auto x = reader.read();
+	for (auto it = std::begin(x); it != std::end(x); ++it) {
+		if ((*it)->isOld(-1))
+			(*it)->dispose();
+	}
 }
 
