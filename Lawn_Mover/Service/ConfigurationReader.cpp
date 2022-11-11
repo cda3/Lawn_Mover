@@ -5,15 +5,9 @@
 #include<iostream>
 
 Configuration ConfigurationReader::prepareConfiguration(std::string configurationFilePath) {
-	//Configuration result;
 	auto conf = loadConfigurationFromFile(configurationFilePath);
-	/*result.parallelismLevel = conf.parallelismLevel;
-	result.runtime = conf.runtime;
-	result.disposers = disposersFactory(conf.folders);
-*/
 	std::shared_ptr<Cleaner> configurations(new Cleaner(disposersFactory(conf.folders)));
 	return Configuration(configurations, conf.runtime, conf.parallelismLevel);
-	//return result;
 }
 
 ConfigurationDTO ConfigurationReader::loadConfigurationFromFile(std::string configurationFilePath)

@@ -96,7 +96,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Lawn_Mover\Lawn_Mover\x64\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>File_System.lib;Business_Logic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>File_System.lib;Business_Logic.lib;SQLServerConnector.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -158,6 +158,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Business_Logic\Business_Logic.vcxproj">
       <Project>{bb91d5a1-bbeb-4c57-a5db-d18c8e416acc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQLServerConnector\SQLServerConnector.vcxproj">
+      <Project>{83d541ec-580a-4469-b3cd-5064c3f1565e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\File_System\File_System.vcxproj">
       <Project>{e6dd1c89-1d83-4b85-855b-83fd965cb697}</Project>

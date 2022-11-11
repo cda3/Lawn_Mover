@@ -3,15 +3,21 @@
 #include "../../File_System/FilesReader.h"
 #include "Manual_Test.h"
 #include "../../Business_Logic/DisposeOldResources.h"
+#include "../../SQLServerConnector/CreateRepoSQLServer.h"
 
 int main()
 {
+	CreateRepoSQLServer creator = CreateRepoSQLServer();
+	creator.addReport("");
+
+
+
 	//FilesReader reader("C://Test//");
-	std::shared_ptr<FilesReader>  reader(new FilesReader("C://Test//"));
+	/*std::shared_ptr<FilesReader>  reader(new FilesReader("C://Test//"));
 
 	DisposeOldResources  disposer(-1, reader);
 	disposer.execute();
-
+*/
 
 	//fileReaderTest();
 

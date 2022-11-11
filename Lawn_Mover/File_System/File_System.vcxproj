@@ -97,7 +97,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Lawn_Mover\Lawn_Mover\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Lawn_Mover\Lawn_Mover\x64\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>Business_Logic.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
