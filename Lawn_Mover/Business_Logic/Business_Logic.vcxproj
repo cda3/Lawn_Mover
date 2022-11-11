@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Cleaner2.h" />
     <ClInclude Include="DisposeOldResources.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="IResourcesReader.h" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Business_Logic.cpp" />
+    <ClCompile Include="Cleaner2.cpp" />
     <ClCompile Include="DisposeOldResources.cpp" />
     <ClCompile Include="IResourcesReader.cpp" />
     <ClCompile Include="pch.cpp">

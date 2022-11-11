@@ -4,13 +4,16 @@
 #include <fstream>
 #include<iostream>
 
-Configuration ConfigurationReader::prepareConfiguration(std::string configurationFilePath) {
-	Configuration result;
+Configuration_Prova ConfigurationReader::prepareConfiguration(std::string configurationFilePath) {
+	//Configuration result;
 	auto conf = loadConfigurationFromFile(configurationFilePath);
-	result.parallelismLevel = conf.parallelismLevel;
+	/*result.parallelismLevel = conf.parallelismLevel;
 	result.runtime = conf.runtime;
 	result.disposers = disposersFactory(conf.folders);
-	return result;
+*/
+	std::shared_ptr<Cleaner2> configurations(new Cleaner2(disposersFactory(conf.folders)));
+	return Configuration_Prova(configurations, conf.runtime, conf.parallelismLevel);
+	//return result;
 }
 
 ConfigurationDTO ConfigurationReader::loadConfigurationFromFile(std::string configurationFilePath)
