@@ -45,7 +45,7 @@
     <ClInclude Include="DisposeOldResources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cleaner2.h">
+    <ClInclude Include="Cleaner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,7 +68,7 @@
     <ClCompile Include="DisposeOldResources.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cleaner2.cpp">
+    <ClCompile Include="Cleaner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

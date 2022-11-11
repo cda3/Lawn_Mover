@@ -156,17 +156,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="ConfigurationDTO.cpp" />
     <ClCompile Include="ConfigurationReader.cpp" />
-    <ClCompile Include="Configuration_Prova.cpp" />
+    <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="Service.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Configuration.h" />
     <ClInclude Include="ConfigurationDTO.h" />
     <ClInclude Include="ConfigurationReader.h" />
-    <ClInclude Include="Configuration_Prova.h" />
+    <ClInclude Include="Configuration.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business_Logic\Business_Logic.vcxproj">

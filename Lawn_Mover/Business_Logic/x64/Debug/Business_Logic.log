@@ -1,6 +1,6 @@
 ﻿  pch.cpp
   Business_Logic.cpp
-  Cleaner2.cpp
+  Cleaner.cpp
   DisposeOldResources.cpp
   IResourcesReader.cpp
   provaCandida.cpp

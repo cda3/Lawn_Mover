@@ -1,15 +1,14 @@
 #pragma once
 #include"ConfigurationDTO.h"
-#include "Configuration.h"
 #include <nlohmann/json.hpp>
-#include "Configuration_Prova.h"
+#include "Configuration.h"
 
 using json = nlohmann::json;
 
 class ConfigurationReader
 {
 public:
-	Configuration_Prova prepareConfiguration(std::string configurationFilePath);
+	Configuration prepareConfiguration(std::string configurationFilePath);
 
 private:
 	ConfigurationDTO loadConfigurationFromFile(std::string configurationFilePath);
