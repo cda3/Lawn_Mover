@@ -28,7 +28,10 @@ ManagedFolder ConfigurationReader::loadConfigurationForFolder (int i, json data)
 	ManagedFolder folder;
 	folder.daysForOldness = x["Number_of_days_that_define_an_old_file"].get<int>();
 	folder.enable = x["Configuration_enabled"].get<bool>();
-	folder.managementInstruction.insert({ "Type", x["Old_file_management"]["Type"].get<std::string>() });
+	auto fileManagement = x["Old_file_management"];
+	folder.managementInstruction.insert({ "Type", fileManagement["Type"].get<std::string>() });
+	if (fileManagement["Type"].get<std::string>() == "HistoryWithFolder")
+		folder.managementInstruction.insert({ "History_folder", fileManagement["History_folder"].get<std::string>() });
 	folder.path = x["Folder_path"].get<std::string>();
 	folder.useSubfolder = x["Iterative_search_into_sub_folders"].get<bool>();
 	addFileFilter(x, folder);
