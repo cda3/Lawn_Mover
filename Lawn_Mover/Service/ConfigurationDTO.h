@@ -10,6 +10,7 @@ public:
 	int daysForOldness;
 	bool useSubfolder;
 	std::map<std::string, std::string> managementInstruction;
+	std::string fileFilter;
 };
 
 class ConfigurationDTO

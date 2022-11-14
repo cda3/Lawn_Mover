@@ -19,6 +19,7 @@ public:
 private:
 	ConfigurationDTO loadConfigurationFromFile(std::string configurationFilePath);
 	ManagedFolder loadConfigurationForFolder(int i, json data);
+	void addFileFilter(nlohmann::json_abi_v3_11_2::json::value_type &x, ManagedFolder &folder);
 	std::vector<ManagedFolder> fillFolder(json data);
 	json parseJsonFile(std::string path);
 	DisposeOldResources disposerFactory(ManagedFolder folder);

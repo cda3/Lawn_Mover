@@ -24,14 +24,22 @@ ConfigurationDTO ConfigurationReader::loadConfigurationFromFile(std::string conf
 }
 
 ManagedFolder ConfigurationReader::loadConfigurationForFolder (int i, json data) {
-	auto x = data["Managed_folders"];
+	auto x = data["Managed_folders"][i];
 	ManagedFolder folder;
-	folder.daysForOldness = x[i]["Number_of_days_that_define_an_old_file"].get<int>();
-	folder.enable = x[i]["Configuration_enabled"].get<bool>();
-	folder.managementInstruction.insert({ "Type", x[i]["Old_file_management"]["Type"].get<std::string>() });
-	folder.path = x[i]["Folder_path"].get<std::string>();
-	folder.useSubfolder = x[i]["Iterative_search_into_sub_folders"].get<bool>();
+	folder.daysForOldness = x["Number_of_days_that_define_an_old_file"].get<int>();
+	folder.enable = x["Configuration_enabled"].get<bool>();
+	folder.managementInstruction.insert({ "Type", x["Old_file_management"]["Type"].get<std::string>() });
+	folder.path = x["Folder_path"].get<std::string>();
+	folder.useSubfolder = x["Iterative_search_into_sub_folders"].get<bool>();
+	addFileFilter(x, folder);
 	return folder;
+}
+
+void ConfigurationReader::addFileFilter(json::value_type &x, ManagedFolder &folder)
+{
+	auto y = x["File_Filter"];
+	if (!(y.is_null()) && !(y.empty()))
+		folder.fileFilter = y.get<std::string>();
 }
 
 std::vector<ManagedFolder> ConfigurationReader::fillFolder(json data) {
@@ -47,7 +55,7 @@ json ConfigurationReader::parseJsonFile(std::string path) {
 }
 
 DisposeOldResources ConfigurationReader::disposerFactory(ManagedFolder folder) {
-	std::shared_ptr<FilesReader>  r(new FilesReader(folder.path));
+	std::shared_ptr<FilesReader>  r(new FilesReader(folder.path, folder.fileFilter));
 	return DisposeOldResources(folder.daysForOldness, r);
 }
 

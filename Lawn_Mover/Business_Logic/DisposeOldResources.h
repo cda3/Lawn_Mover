@@ -5,8 +5,6 @@
 
 class DisposeOldResources {
 public:
-	//auto resources = std::vector<std::shared_ptr<IResource>>();
-
 	DisposeOldResources(int daysForOldResources, std::shared_ptr<IResourcesReader> reader);
 	void execute();
 
