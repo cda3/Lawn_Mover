@@ -4,12 +4,21 @@
 #include "Manual_Test.h"
 #include "../../Business_Logic/DisposeOldResources.h"
 #include "../../SQLServerConnector/CreateRepoSQLServer.h"
+#include "Derived.h"
 
 int main()
 {
-	CreateRepoSQLServer creator = CreateRepoSQLServer();
-	creator.addReport("");
+	Base* b = new Derived();
 
+	std::shared_ptr<Base> sb(new Derived());// = std::make_shared<Derived>(new Derived());
+
+	//b->print();
+
+	sb->print();
+
+	/*CreateRepoSQLServer creator = CreateRepoSQLServer();
+	creator.addReport("");
+*/
 
 
 	//FilesReader reader("C://Test//");

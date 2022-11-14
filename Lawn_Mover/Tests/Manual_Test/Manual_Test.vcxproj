@@ -153,6 +153,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Derived.cpp" />
     <ClCompile Include="Manual_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +169,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Derived.h" />
     <ClInclude Include="Manual_Test.h" />
   </ItemGroup>
   <ItemGroup>

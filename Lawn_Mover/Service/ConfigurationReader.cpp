@@ -3,6 +3,9 @@
 
 #include <fstream>
 #include<iostream>
+#include<sstream>
+#include<istream>
+#include <memory>
 
 Configuration ConfigurationReader::prepareConfiguration(std::string configurationFilePath) {
 	auto conf = loadConfigurationFromFile(configurationFilePath);
@@ -50,7 +53,8 @@ DisposeOldResources ConfigurationReader::disposerFactory(ManagedFolder folder) {
 
 std::vector<DisposeOldResources> ConfigurationReader::disposersFactory(std::vector<ManagedFolder> folders) {
 	std::vector<DisposeOldResources> disposers;
-	for (int i = 0; i < folders.size(); ++i) 
-		disposers.push_back(disposerFactory(folders[i]));
+	for (int i = 0; i < folders.size(); ++i)
+		if (folders[i].enable) 
+			disposers.push_back(disposerFactory(folders[i]));
 	return disposers;
 }

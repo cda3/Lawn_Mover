@@ -1,3 +1,6 @@
-﻿  CreateRepoSQLServer.cpp
+﻿  pch.cpp
+  CreateRepoSQLServer.cpp
+  dllmain.cpp
+  Generating Code...
      Creating library C:\Lawn_Mover\Lawn_Mover\x64\Debug\SQLServerConnector.lib and object C:\Lawn_Mover\Lawn_Mover\x64\Debug\SQLServerConnector.exp
   SQLServerConnector.vcxproj -> C:\Lawn_Mover\Lawn_Mover\x64\Debug\SQLServerConnector.dll

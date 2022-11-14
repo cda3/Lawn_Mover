@@ -3,6 +3,12 @@
 #include <nlohmann/json.hpp>
 #include "Configuration.h"
 
+#include <fstream>
+#include<iostream>
+#include<sstream>
+#include<istream>
+#include <memory>
+
 using json = nlohmann::json;
 
 class ConfigurationReader
