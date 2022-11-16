@@ -160,14 +160,17 @@
   <ItemGroup>
     <ClInclude Include="Date.h" />
     <ClInclude Include="FilesReader.h" />
+    <ClInclude Include="FilesReader_ForHistory.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource_File.h" />
+    <ClInclude Include="Resource_File_ForHistory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="FilesReader.cpp" />
+    <ClCompile Include="FilesReader_ForHistory.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -175,6 +178,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Resource_File.cpp" />
+    <ClCompile Include="Resource_File_ForHistory.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,6 +36,12 @@
     <ClInclude Include="Date.h">
       <Filter>DTO</Filter>
     </ClInclude>
+    <ClInclude Include="Resource_File_ForHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilesReader_ForHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -52,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="Date.cpp">
       <Filter>Source Files\DTO</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource_File_ForHistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FilesReader_ForHistory.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
