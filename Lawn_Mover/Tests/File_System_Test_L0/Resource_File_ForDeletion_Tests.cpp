@@ -1,6 +1,6 @@
 #include "pch.h"
-#include "Resource_File_Tests.h"
-#include "../File_System_Test_L0/MockResourceFile.h"
+#include "Resource_File_ForDeletion_Tests.h"
+#include "../File_System_Test_L0/MockResourceFileForDeletion.h"
 #include "../../File_System/Resource_File_ForDeletion.h"
 
 
@@ -27,7 +27,7 @@ TEST(Resource_File, isOld_isNotOld_ReturnFalse) {
 
 TEST(Resource_File, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
 	int deleteSuccessfull = 0;
-	MockResourceFile file(2022, 11, 4, "", deleteSuccessfull);
+	MockResourceFileForDeletion file(2022, 11, 4, "", deleteSuccessfull);
 
 	file.dispose();
 
@@ -36,7 +36,7 @@ TEST(Resource_File, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
 
 TEST(Resource_File, dispose_ErrorDuringDisposing_NoExceptionThrownBecauseDeletionIsIdempotent) {
 	int deleteUnsuccessfull = 1;
-	MockResourceFile file(2022, 11, 4, "", deleteUnsuccessfull);
+	MockResourceFileForDeletion file(2022, 11, 4, "", deleteUnsuccessfull);
 
 	file.dispose();
 	

@@ -12,5 +12,6 @@
     <TestDuration Test="Resource_File.dispose_ErrorDuringDisposing_ThrowException" Duration="1" />
     <TestDuration Test="Resource_File.dispose_ErrorDuringDisposing_NoExceptionThrown" Duration="1" />
     <TestDuration Test="Resource_File.dispose_ErrorDuringDisposing_NoExceptionThrownBecauseDeletionIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForDeletion.isOld_isOld_ReturnTrue" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

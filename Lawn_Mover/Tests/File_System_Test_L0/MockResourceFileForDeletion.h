@@ -1,10 +1,10 @@
 #pragma once
 #include "../../File_System/Resource_File_ForDeletion.h"
 
-class MockResourceFile : public Resource_File_ForDeletion
+class MockResourceFileForDeletion : public Resource_File_ForDeletion
 {
 public:
-	MockResourceFile(int year, int month, int day, std::string filePath, int delatedResult);
+	MockResourceFileForDeletion(int year, int month, int day, std::string filePath, int delatedResult);
 	bool isDisposeCalled = false;
 
 protected:

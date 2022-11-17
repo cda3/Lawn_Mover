@@ -1,12 +1,18 @@
-﻿  FilesReader_ForDeletion.cpp
-c:\lawn_mover\lawn_mover\file_system\filesreader_fordeletion.h(14): warning C4251: 'FilesReader_ForDeletion::_folderPath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader_ForDeletion'
+﻿  FilesReader_ForHistory.cpp
+c:\lawn_mover\lawn_mover\file_system\filesreader.h(14): warning C4251: 'FilesReader::_originFolderPath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\lawn_mover\lawn_mover\file_system\filesreader_fordeletion.h(17): warning C4251: 'FilesReader_ForDeletion::_fileFilter': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader_ForDeletion'
+c:\lawn_mover\lawn_mover\file_system\filesreader.h(15): warning C4251: 'FilesReader::_fileFilter': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\lawn_mover\lawn_mover\file_system\resource_file_fordeletion.h(20): warning C4251: 'Resource_File_ForDeletion::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForDeletion'
+c:\lawn_mover\lawn_mover\file_system\filesreader_forhistory.h(13): warning C4251: 'FilesReader_ForHistory::_destinationFolderPath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'FilesReader_ForHistory'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-  Resource_File__ForDeletion.cpp
-c:\lawn_mover\lawn_mover\file_system\resource_file_fordeletion.h(20): warning C4251: 'Resource_File_ForDeletion::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForDeletion'
+c:\lawn_mover\lawn_mover\file_system\resourcefile.h(18): warning C4251: 'ResourceFile::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'ResourceFile'
+  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\lawn_mover\lawn_mover\file_system\resource_file_forhistory.h(18): warning C4251: 'Resource_File_ForHistory::_destinationFolder': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForHistory'
+  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  Resource_File_ForHistory.cpp
+c:\lawn_mover\lawn_mover\file_system\resourcefile.h(18): warning C4251: 'ResourceFile::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'ResourceFile'
+  c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\lawn_mover\lawn_mover\file_system\resource_file_forhistory.h(18): warning C4251: 'Resource_File_ForHistory::_destinationFolder': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForHistory'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
   Generating Code...
      Creating library C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System.lib and object C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System.exp

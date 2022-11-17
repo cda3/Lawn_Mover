@@ -33,13 +33,15 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClInclude Include="MockResourceFile.h" />
+    <ClInclude Include="MockResourceFileForDeletion.h" />
+    <ClInclude Include="MockResourceFIleForHistory.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Resource_File_Tests.h" />
+    <ClInclude Include="Resource_File_ForDeletion_Tests.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MockResourceFile.cpp" />
-    <ClCompile Include="Resource_File_Tests.cpp" />
+    <ClCompile Include="MockResourceFileForDeletion.cpp" />
+    <ClCompile Include="MockResourceFIleForHistory.cpp" />
+    <ClCompile Include="Resource_File_ForDeletion_Tests.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
