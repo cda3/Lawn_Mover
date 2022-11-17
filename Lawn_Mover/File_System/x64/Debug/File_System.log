@@ -1,6 +1,6 @@
 ﻿  Resource_File_ForHistory.cpp
 c:\lawn_mover\lawn_mover\file_system\resourcefile.h(18): warning C4251: 'ResourceFile::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'ResourceFile'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\lawn_mover\lawn_mover\file_system\resource_file_forhistory.h(18): warning C4251: 'Resource_File_ForHistory::_destinationFolder': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForHistory'
+c:\lawn_mover\lawn_mover\file_system\resource_file_forhistory.h(18): warning C4251: 'Resource_File_ForHistory::_destinationFile': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForHistory'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
   File_System.vcxproj -> C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System.dll

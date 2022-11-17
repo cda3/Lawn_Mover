@@ -15,7 +15,8 @@ protected:
 	virtual bool moveFile();
 
 private:
-	std::string _destinationFolder;
+	std::string _destinationFile;
+	void checkDestinationFileName();
 
 };
 

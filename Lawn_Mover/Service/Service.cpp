@@ -3,7 +3,6 @@
 #include "../Business_Logic/IResourcesReader.h"
 #include"ConfigurationReader.h"
 
-
 int main()
 {
 	auto reader = ConfigurationReader();
