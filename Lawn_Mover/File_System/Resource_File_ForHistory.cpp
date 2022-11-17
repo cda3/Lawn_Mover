@@ -12,7 +12,7 @@ void Resource_File_ForHistory::dispose()
 {
 	auto result = moveFile();
 	if (result == 0) {
-		std::cout << "File " << _filePath.c_str() << " already moved from another Lawn Mover instance" << std::endl;
+		std::cout << "File " << _filePath.c_str() << " has not been moved" << std::endl;
 	}
 }
 

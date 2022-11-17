@@ -12,7 +12,7 @@ TEST(Resource_File_ForDeletion, isOld_isOld_ReturnTrue) {
 	EXPECT_TRUE(oldness);
 }
 
-TEST(Resource_File, isOld_isNotOld_ReturnFalse) {
+TEST(Resource_File_ForDeletion, isOld_isNotOld_ReturnFalse) {
 	time_t t = time(0);  
 	struct tm * now = localtime(&t);
 	int year = now->tm_year + 1900;
@@ -25,7 +25,7 @@ TEST(Resource_File, isOld_isNotOld_ReturnFalse) {
 	EXPECT_FALSE(oldness);
 }
 
-TEST(Resource_File, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
+TEST(Resource_File_ForDeletion, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
 	int deleteSuccessfull = 0;
 	MockResourceFileForDeletion file(2022, 11, 4, "", deleteSuccessfull);
 
@@ -34,7 +34,7 @@ TEST(Resource_File, dispose_NoErrorDuringDisposing_NoExceptionThrown) {
 	EXPECT_TRUE(file.isDisposeCalled);
 }
 
-TEST(Resource_File, dispose_ErrorDuringDisposing_NoExceptionThrownBecauseDeletionIsIdempotent) {
+TEST(Resource_File_ForDeletion, dispose_ErrorDuringDisposing_NoExceptionThrownBecauseDeletionIsIdempotent) {
 	int deleteUnsuccessfull = 1;
 	MockResourceFileForDeletion file(2022, 11, 4, "", deleteUnsuccessfull);
 
