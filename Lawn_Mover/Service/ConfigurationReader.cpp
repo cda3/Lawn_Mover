@@ -1,5 +1,6 @@
 #include "ConfigurationReader.h"
-#include "../File_System/FilesReader.h"
+#include "../File_System/FilesReader_ForDeletion.h"
+#include "../File_System/FilesReader_ForHistory.h"
 
 #include <fstream>
 #include<iostream>
@@ -58,8 +59,14 @@ json ConfigurationReader::parseJsonFile(std::string path) {
 }
 
 DisposeOldResources ConfigurationReader::disposerFactory(ManagedFolder folder) {
-	std::shared_ptr<FilesReader>  r(new FilesReader(folder.path, folder.fileFilter));
-	return DisposeOldResources(folder.daysForOldness, r);
+	if (folder.managementInstruction.at("Type") == "Delete") {
+		std::shared_ptr<FilesReader_ForDeletion>  r(new FilesReader_ForDeletion(folder.path, folder.fileFilter));
+		return DisposeOldResources(folder.daysForOldness, r);
+	}
+	else if (folder.managementInstruction.at("Type") == "HistoryWithFolder") {
+		std::shared_ptr<FilesReader_ForHistory>  r(new FilesReader_ForHistory(folder.path, folder.fileFilter, folder.managementInstruction.at("History_folder")));
+		return DisposeOldResources(folder.daysForOldness, r);
+	}
 }
 
 std::vector<DisposeOldResources> ConfigurationReader::disposersFactory(std::vector<ManagedFolder> folders) {

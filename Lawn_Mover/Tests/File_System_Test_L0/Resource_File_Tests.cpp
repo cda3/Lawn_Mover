@@ -1,11 +1,11 @@
 #include "pch.h"
 #include "Resource_File_Tests.h"
 #include "../File_System_Test_L0/MockResourceFile.h"
-#include "../../File_System/Resource_File.h"
+#include "../../File_System/Resource_File_ForDeletion.h"
 
 
-TEST(Resource_File, isOld_isOld_ReturnTrue) {
-	Resource_File file(2022, 11, 4, "");
+TEST(Resource_File_ForDeletion, isOld_isOld_ReturnTrue) {
+	Resource_File_ForDeletion file(2022, 11, 4, "");
 
 	bool oldness = file.isOld(2);
 	   
@@ -18,7 +18,7 @@ TEST(Resource_File, isOld_isNotOld_ReturnFalse) {
 	int year = now->tm_year + 1900;
 	int month = now->tm_mon + 1;
 	int day = now->tm_mday;
-	Resource_File file(year, month, day, "");
+	Resource_File_ForDeletion file(year, month, day, "");
 
 	bool oldness = file.isOld(1);
 

@@ -1,6 +1,6 @@
 #include <iostream>
-#include  "../../File_System/Resource_File.h"
-#include "../../File_System/FilesReader.h"
+#include  "../../File_System/Resource_File_ForDeletion.h"
+#include "../../File_System/FilesReader_ForDeletion.h"
 #include "Manual_Test.h"
 #include "../../Business_Logic/DisposeOldResources.h"
 #include "../../SQLServerConnector/CreateRepoSQLServer.h"
@@ -15,12 +15,12 @@ int main()
 	std::wstring b = L"C://Test//History//Nuova immagine bitmap.bmp";
 	MoveFile(a.c_str(), b.c_str());*/
 
-	FilesReader_ForHistory reader("C://Test//", "", "C://Test//History//");
+	/*FilesReader_ForHistory reader("C://Test//", "", "C://Test//History//");
 	auto x = reader.read();
 	for (auto it = std::begin(x); it != std::end(x); ++it) {
 		if ((*it)->isOld(-1))
 			(*it)->dispose();
-	}
+	}*/
 
 	//Base* b = new Derived();
 
@@ -38,11 +38,10 @@ int main()
 
 
 	//FilesReader reader("C://Test//");
-	/*std::shared_ptr<FilesReader>  reader(new FilesReader("C://Test//"));
-
+	std::shared_ptr<FilesReader_ForDeletion>  reader(new FilesReader_ForDeletion("C://Test//", ""));
 	DisposeOldResources  disposer(-1, reader);
 	disposer.execute();
-*/
+
 
 	//fileReaderTest();
 
@@ -59,7 +58,7 @@ int main()
 
 void fileReaderTest()
 {
-	FilesReader reader("C://Test//", "");
+	FilesReader_ForDeletion reader("C://Test//", "");
 	auto x = reader.read();
 	for (auto it = std::begin(x); it != std::end(x); ++it) {
 		if ((*it)->isOld(-1))

@@ -17,11 +17,13 @@ std::vector<std::shared_ptr<IResource>> FilesReader_ForHistory::read()
 {
 	std::vector<std::shared_ptr<IResource>> result;
 	for (auto& file : std::filesystem::directory_iterator(_originFolderPath)) {
-		auto filePath = (file.path()).string();
-		auto filename = filePath.substr(filePath.find_last_of("/\\") + 1);
-		auto regex = std::regex(_fileFilter, std::regex_constants::ECMAScript | std::regex_constants::icase);
-		if (_fileFilter.empty() || isFileNameMatchingRegex(filename, regex))
-			addFile(filePath, result);
+		if (file.is_regular_file()) {
+			auto filePath = (file.path()).string();
+			auto filename = filePath.substr(filePath.find_last_of("/\\") + 1);
+			auto regex = std::regex(_fileFilter, std::regex_constants::ECMAScript | std::regex_constants::icase);
+			if (_fileFilter.empty() || isFileNameMatchingRegex(filename, regex))
+				addFile(filePath, result);
+		}
 	}
 	return result;
 }

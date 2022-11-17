@@ -18,9 +18,10 @@
       "Number_of_days_that_define_an_old_file": -1,
       "Old_file_management": {
         "Type": "HistoryWithFolder",
-        "History_folder": "C://Test//History"
+        "History_folder": "C://Test//History//"
       },
-      "Iterative_search_into_sub_folders": false
+      "Iterative_search_into_sub_folders": false,
+      "File_Filter": ".*\\.txt$"
     }
 	]
 }
