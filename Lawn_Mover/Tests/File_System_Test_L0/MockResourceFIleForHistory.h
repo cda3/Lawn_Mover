@@ -5,14 +5,15 @@
 class MockResourceFileForHistory : public Resource_File_ForHistory
 {
 public:
-	MockResourceFileForHistory(int year, int month, int day, std::string filePath, std::string destinationFolder, int moveResult);
+	MockResourceFileForHistory(int year, int month, int day, std::string filePath, std::string destinationFolder, bool moveResult, bool isFilePresentInHistoryFolder);
 	bool isDisposeCalled = false;
+	bool isFileRenamed = false;
 
 protected:
 	bool moveFile() override;
 
 private:
-	int _moveResult;
-
+	bool _moveResult;
+	bool _isFilePresentInHistoryFolder;
 };
 

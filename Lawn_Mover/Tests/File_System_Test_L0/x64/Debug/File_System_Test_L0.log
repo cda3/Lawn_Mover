@@ -1,11 +1,9 @@
 ﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  MockResourceFIleForHistory.cpp
+  Resource_File_ForHistory_Tests.cpp
 c:\lawn_mover\lawn_mover\file_system\resourcefile.h(18): warning C4251: 'ResourceFile::_filePath': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'ResourceFile'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
 c:\lawn_mover\lawn_mover\file_system\resource_file_forhistory.h(18): warning C4251: 'Resource_File_ForHistory::_destinationFile': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Resource_File_ForHistory'
   c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.16.27023\include\xstring(4373): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Resource_File_ForHistory_Tests.cpp
-     Creating library C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System_Test_L0.lib and object C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System_Test_L0.exp
+c:\lawn_mover\lawn_mover\tests\file_system_test_l0\resource_file_forhistory_tests.cpp(16): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\time.h(506): note: see declaration of 'localtime'
   File_System_Test_L0.vcxproj -> C:\Lawn_Mover\Lawn_Mover\x64\Debug\File_System_Test_L0.exe

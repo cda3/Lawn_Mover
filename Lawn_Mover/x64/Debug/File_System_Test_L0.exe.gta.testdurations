@@ -20,5 +20,18 @@
     <TestDuration Test="Resource_File_ForHistory.isOld_isNotOld_ReturnFalse" Duration="1" />
     <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposing_NoExceptionThrown" Duration="1" />
     <TestDuration Test="Resource_File_ForHistory.dispose_ErrorDuringDisposing_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_FileNotPresentInHistoryFolder_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_FileNotPresentInHistoryFolder_FileNotRenamed" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_FileAlreadyPresentInHistoryFolder_FileRenamed" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileNotPresentInHistoryFolder_NoExceptionThrown" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_ErrorDuringDisposingAFileNotPresentInHistoryFolder_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileAlreadyPresentInHistoryFolder_NoExceptionThrown" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_ErrorDuringDisposingAFileAlreadyPresentInHistoryFolder_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileNotPresentInHistoryFolder_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileAlreadyPresentInHistoryFolder_NoExceptionThrownBecauseMovingIsIdempotent" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileNotPresentInHistoryFolder_NoExceptionThrownAndFileNotRenamed" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_ErrorDuringDisposingAFileNotPresentInHistoryFolder_NoExceptionThrownAndFileNotRenamed" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_NoErrorDuringDisposingAFileAlreadyPresentInHistoryFolder_NoExceptionThrownAndFileRenamed" Duration="1" />
+    <TestDuration Test="Resource_File_ForHistory.dispose_ErrorDuringDisposingAFileAlreadyPresentInHistoryFolder_NoExceptionThrownAndFileRenamed" Duration="1" />
   </TestDurations>
 </GtaTestDurations>
